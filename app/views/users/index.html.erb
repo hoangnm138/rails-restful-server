@@ -1,0 +1,21 @@
+<div class="container">
+  <%= link_to "HOME", root_path %>
+  <h1 class="title">User Page</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>Username:</td>
+        <td><%= web_user.user_name %></td>
+      </tr>
+      <tr>
+        <td>Access Token:</td>
+        <td><%= web_user.access_token %></td>
+      </tr>
+      <tr>
+        <td>Token Expire At:</td>
+        <td><%= web_user.token_expire_at.strftime('%F %T') %></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= link_to "Logout", logout_path, method: :delete %>
+</div>

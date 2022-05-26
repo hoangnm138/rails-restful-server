@@ -1,0 +1,31 @@
+<div class="container">
+  <%= link_to "HOME", root_path %>
+  <div class="row justify-content-center">
+    <h1 class="title">Register</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <%= form_for @user do |f| %>
+        <div class="form-group">
+          <%= f.label :full_name, "Fullname" %>
+          <%= f.text_field :full_name, class: "form-control", placeholder: "Enter full name" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :user_name, "Username" %>
+          <%= f.text_field :user_name, class: "form-control", placeholder: "Enter user name" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password, "Password" %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Password Confirmation" %>
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Enter password confirmation" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Register", class: "btn btn-info" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
